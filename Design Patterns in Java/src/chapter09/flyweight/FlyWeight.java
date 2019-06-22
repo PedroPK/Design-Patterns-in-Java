@@ -14,4 +14,10 @@ public class FlyWeight {
 		return fly;
 	}
 	
+	public static String getConcatenatedString() {
+		String fly = "fly" + "Weight";
+		
+		return fly;
+	}
+	
 }
