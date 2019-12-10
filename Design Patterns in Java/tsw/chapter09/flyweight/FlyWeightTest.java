@@ -7,15 +7,6 @@ import org.junit.Test;
 public class FlyWeightTest {
 
 	@Test
-	public void testStaticStringEquals() {
-		// Arrange and Act
-		String one = FlyWeight.getStaticString();
-		String two = FlyWeight.getStaticString();
-		
-		assertEquals(one, two);
-	}
-	
-	@Test
 	public void testStaticStringSame() {
 		// Arrange and Act
 		String one = FlyWeight.getStaticString();
@@ -25,12 +16,33 @@ public class FlyWeightTest {
 	}
 	
 	@Test
-	public void testStaticAndConcatenatedStringEquals() {
+	public void testSequenciallyConcatenatedStringsSame() {
+		// Arrange and Act
+		String one = FlyWeight.getSequenciallyConcatenatedString();
+		String two = FlyWeight.getSequenciallyConcatenatedString();
+		
+		// Not the Same!
+		assertNotSame(one, two);
+	}
+	
+	@Test
+	public void testNewStringsSame() {
+		// Arrange and Act
+		String one = FlyWeight.getNewString();
+		String two = FlyWeight.getNewString();
+		
+		// Not the Same!
+		assertNotSame(one, two);
+	}
+	
+	@Test
+	public void testStaticAndSequenciallyConcatenatedStringSame() {
 		// Arrange and Act
 		String one = FlyWeight.getStaticString();
-		String two = FlyWeight.getConcatenatedString();
+		String two = FlyWeight.getSequenciallyConcatenatedString();
 		
-		assertEquals(one, two);
+		// Not Same
+		assertNotSame(one, two);
 	}
 	
 	@Test
@@ -43,15 +55,6 @@ public class FlyWeightTest {
 	}
 	
 	@Test
-	public void testStaticAndNewStringsEquals() {
-		// Arrange and Act
-		String one = FlyWeight.getStaticString();
-		String two = FlyWeight.getNewString();
-		
-		assertEquals(one, two);
-	}
-	
-	@Test
 	public void testStaticAndNewStringsSame() {
 		// Arrange and Act
 		String one = FlyWeight.getStaticString();
@@ -59,15 +62,6 @@ public class FlyWeightTest {
 		
 		// Not Same!
 		assertNotSame(one, two);
-	}
-	
-	@Test
-	public void testConcatenatedAndNewStringsEquals() {
-		// Arrange and Act
-		String one = FlyWeight.getConcatenatedString();
-		String two = FlyWeight.getNewString();
-		
-		assertEquals(one, two);
 	}
 	
 	@Test

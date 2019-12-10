@@ -20,4 +20,13 @@ public class FlyWeight {
 		return fly;
 	}
 	
+	public static String getSequenciallyConcatenatedString() {
+		String fly = "fly";
+		String weight = "Weight";
+		
+		fly = fly + weight;
+		
+		return fly;
+	}
+	
 }
