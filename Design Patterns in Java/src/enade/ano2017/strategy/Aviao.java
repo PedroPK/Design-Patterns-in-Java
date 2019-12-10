@@ -5,8 +5,6 @@ public abstract class Aviao {
 	protected Voo aVoo;
 	protected Pouso aPouso;
 	
-	public abstract void informarDados();
-	
 	public void performarVoo() {
 		this.aVoo.voar();
 	}

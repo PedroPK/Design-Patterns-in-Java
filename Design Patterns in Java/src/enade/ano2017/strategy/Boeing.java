@@ -7,9 +7,4 @@ public class Boeing extends Aviao {
 		super.aPouso = new PousoDiurno();
 	}
 	
-	@Override
-	public void informarDados() {
-		System.out.println("Dados de um Boeing");
-	}
-
 }
